@@ -23,6 +23,7 @@ def get_mongo_client(db_name, host, port, username, password, **kwargs):
     import pymongo
     client = pymongo.MongoClient(host, int(port), username=username, password=password,
                              authSource=db_name, **kwargs)
+    pymongo.MongoClient("mongodb+srv://michalk:mojehaslo@seml.mqiebcc.mongodb.net/?retryWrites=true&w=majority&ssl=true", server_api=ServerApi('1'), connect=False)
     return client
 
 
